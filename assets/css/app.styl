@@ -1,0 +1,198 @@
+@import '_init.styl'
+	body 
+		_reset(0)
+		_pr()
+		_bc($gray)
+		_ff('Roboto')
+		.header
+			_w(100%)
+			_bc($blue)
+			_reset(0)
+			_t(0)
+			_dfr(space-between, center)
+			_z(3)
+			position fixed
+			padding 5px 20px
+			box-sizing: border-box
+			&-logo
+				_w(250px)
+				_h(60px)
+			&-ejs 
+				_w(40px)
+		.main 
+			_mTop(70px)
+			_dfc(center, center)
+			&-logo 
+				_w(200px)
+				margin 20px auto
+			&-container
+				_fullW()
+				.items 
+					_fullW()
+					_dfr(center, flex-start)
+					_fw(wrap)
+					&-card
+						_w(18%)
+						_bc(rgba(white, .5))
+						_br(5px)
+						_maxw(250px)
+						box-sizing: border-box
+						margin 10px 1%
+						_dfc(center, center)
+						box-shadow: 2px 2px 10px $blue
+						_pr()
+						&-imageContainer 
+							_h(100px)
+							_dfr(center, center)
+							background-image: url('../images/background_item.png')
+							background-size: cover;
+							background-repeat no-repeat
+							border-radius 5px 5px 0 0
+							img 
+								_fullW()
+								_br(50%)
+								_w(70%)
+								margin 0 15% -90px 15%
+								_z(2)
+								_(white)
+						&-info
+							_bc(rgba(white, .5))
+							_fullW()
+							padding-top 70px
+							padding-bottom 15px
+							_pr()
+							border-radius 0 0 5px 5px
+							_dfc(center, center)
+							h2
+								_ff('Roboto')
+								_c($blue)
+								_fz(18px)
+								_h(30px)
+								_mTop(20px)
+								_ta(center)
+							&-icons
+								_dfc(center, center)
+								_fullW()
+								&-item
+									_dfr(flex-start, center)
+									border-bottom 1px solid rgba(white, .5)
+									_minh(40px)
+									_fullW()
+									box-sizing: border-box
+									padding 5px 10px
+									&-icon
+										_maxw(20px)
+									h4, h5
+										_reset(0)
+										_mLeft(10px)
+										_ff('Roboto')
+										_fz(13px)
+										_fwn()
+									h5
+										_fz(12px)
+									&:last-child 
+										border-bottom 1px solid transparent
+									&:first-child
+										border-top 1px solid rgba(white, .5)
+							&-button 
+								_br(25px)
+								_bc($blue)
+								_aReset(white)
+								_ff('Roboto')
+								_fz(12px)
+								_ta(center)
+								outline none
+								padding 5px 10px
+								transition .5s
+								cursor pointer
+								&:active 
+									transform scale(.9)
+						@media(max-width 768px)
+							_w(45%)
+		.modal
+			transition .5s
+			_bc(rgba(black, .9))
+			position fixed
+			_l(0)
+			_t(74px)
+			_r(0)
+			_z(4)
+			_fullW()
+			_h(100vh)
+			_dfr(center, center)
+			&-info 
+				_dfr(flex-start, center)
+				_bc(rgba(white, .9))
+				_br(5px)
+				_pr()
+				_w(50%)
+				overflow hidden
+				_minw(500px)
+				&-details 
+					_reset(0)
+					_fullW()
+					h2
+						_c($blue)
+						_reset(0)
+						_ta(left)
+						_mTop(5px)
+						padding 0 10px
+					&-text
+						_reset(0)
+						_dfr(flex-start, center)
+						padding 0 15px 
+						box-sizing: border-box
+						_fullW()
+						img 
+							_maxw(20px)
+							_reset(0)
+							_mRight(15px)
+						p
+							_fz(14px)
+					&-closed 
+						_pa()
+						_t(0)
+						_r(0)
+						_bc(rgba(red, .7))
+						border-radius 0 5px 0 0
+						_c(white)
+						border none
+						padding 5px 10px
+						outline none
+						transition .5s
+						cursor pointer
+						&:hover 
+							_bc(red)
+						&:active
+							_bc(rgba(red, .6))
+				@media(max-width 768px)
+					_dfc(center, center)
+					_w(90%)
+					_minw(0px)
+					_maxw(370px)
+					box-shadow 2px 2px 20px $green
+					&-img 
+						_br(50%) 
+						_mTop(20px)
+						_(rgba($green, .5))
+					&-details
+						h2
+							_ta(center)
+		.finishBox
+			_dfc(center, center)
+			padding 20px 
+			_(rgba(white, .5))
+			_br(10px)
+			_w(90%)
+			margin 20px auto
+			h5
+				_ta(center)
+				_c(white)
+				_fz(20px)
+			p
+				_db()
+				_c(white)
+				a
+					_c($green)
+
+			
